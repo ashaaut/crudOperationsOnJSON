@@ -10,14 +10,18 @@ import Button from '@material-ui/core/Button';
 
 
 class Login extends Component {
+  constructor(props) {
+    super(props)
+  }
   render() {
+    const { changeState } = this.props;
     return (
       <div className="login-container">
         <div className="login-name-div">
-          <ExitToAppIcon className="appIcon" fontSize="large"/>
+          <ExitToAppIcon className="appIcon" fontSize="large" />
           <h1>Login</h1>
         </div>
-        <div className="signUpNow-div">Don't have an account?Sign up now!</div>
+        <div className="signUpNow-div" onClick={() => changeState("signUp")}>Don't have an account?Sign up now!</div>
         <div className="login-div">
           <form className="form-div">
 
@@ -27,14 +31,14 @@ class Login extends Component {
               margin="normal"
               required
               InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <EmailIcon/>
-                </InputAdornment>
-              ),
-            }}
-              // onChange={this.setUsername}
-              // value={this.state.username}
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <EmailIcon />
+                  </InputAdornment>
+                ),
+              }}
+            // onChange={this.setUsername}
+            // value={this.state.username}
             />
             <TextField
               variant="standard"
@@ -43,31 +47,28 @@ class Login extends Component {
               required
               type="password"
               InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <LockIcon/>
-                </InputAdornment>
-              ),
-            }}
-              // onChange={this.setPassword}
-              // value={this.state.password}
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <LockIcon />
+                  </InputAdornment>
+                ),
+              }}
+            // onChange={this.setPassword}
+            // value={this.state.password}
             />
 
             <div className="toggle-div">
-              <label class="switch">
-                <input type="checkbox" checked/>
-                <span class="slider round"></span>
-              </label>Keep me signed in!
+              <input type="checkbox" />Keep me signed in
 
             </div>
-            
 
-             <div className="button-div">
+
+            <div className="button-div">
               <Button className="button-div" variant="contained" color="primary">SIGN IN</Button>
-         
+
             </div>
 
-             </form>
+          </form>
         </div>
       </div>
     );
