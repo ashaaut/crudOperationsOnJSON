@@ -4,6 +4,7 @@ import { hot } from 'react-hot-loader/root';
 import Login from './components/login'
 import SignUp from './components/signUp.jsx'
 import './../assets/styles/app.css'
+import Emp from './components/employees'
 
 class App extends React.Component {
   constructor(){
@@ -21,7 +22,8 @@ class App extends React.Component {
   render() {
         return (
           <div className="app">
-          {this.state.selected=="login"?<Login changeState={this.changeState}/>:<SignUp changeState={this.changeState}/>}
+            <Emp/>
+          {/* {this.state.selected=="login"?<Login changeState={this.changeState}/>:<SignUp changeState={this.changeState}/>} */}
           
           </div>
     );
