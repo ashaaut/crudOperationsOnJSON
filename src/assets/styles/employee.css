@@ -1,6 +1,10 @@
 .employee-container{
     height: 100%;
     width: 100%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
     /* background-color: aqua; */
 }
 
@@ -12,6 +16,7 @@
     box-shadow: 2px 2px 2px 2px gray;
     display: flex;
     flex-direction: row;
+    margin-left: 10px;
 }
 .card-image{
     height: 100%;
