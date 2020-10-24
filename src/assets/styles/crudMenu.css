@@ -1,0 +1,11 @@
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     box-shadow: 2px 2px 2px 2px gray;
+     height: 100%;
+    width: 90%; 
+}
+.option{
+    margin-top: 17px;
+}
