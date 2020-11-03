@@ -6,6 +6,9 @@ import RoomIcon from '@material-ui/icons/Room';
 import WorkIcon from '@material-ui/icons/Work';
 import { MdMoreVert } from "react-icons/md";
 import CrudMenu from './crudMenu'
+import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+// import MailOutlineIcon from '@material-ui/icons/MailOutline';
 
 
 class Employee extends Component {
@@ -14,23 +17,25 @@ class Employee extends Component {
     this.state = ({
       selectedOption: false
     })
-    this.onClick=this.onClick.bind(this)
+    this.onClick = this.onClick.bind(this)
   }
   onClick() {
     this.setState({ selectedOption: !this.state.selectedOption })
   }
 
   render() {
-    let sidebar;
-    // this.state.selectedOption ? sidebar => <CrudMenu /> : sidebar = ""
-    const options = ["Edit", "update", "delete"]
     const data = this.props;
     console.log(data.data["Profile"])
     console.log(this.state.selectedOption)
     return (
       <div className="card-container">
         <div className="card-image">
-          <img src={data.data["Profile"]} ></img>
+          <img className="profile" src={data.data["Profile"]} ></img>
+          <div>
+            <FacebookIcon className="icon"/>
+          <TwitterIcon className="icon"/>
+          <MailOutlineIcon className="icon"/>
+          </div>
         </div>
 
         <div className="card-data">

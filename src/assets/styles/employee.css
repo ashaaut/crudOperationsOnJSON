@@ -21,22 +21,31 @@
 }
 .card-image{
     height: 100%;
-    width: 35%;
+    width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-color: aqua; */
+    flex-direction: column;
+    background:linear-gradient(50deg,#ff6ec4,#7873f5);
+}
+.profile{
+    height: 60%;
+    width: 80%;
+    /* background-color: #ff6ec4; */
 }
 .card-data{
     /* background-color: blueviolet; */
     height: 100%;
-    width:70% ;
+    width:75% ;
     display: flex;
     flex-direction: column;
 }
  .emp-bar{
     display: flex;
+
     height: 25%;
+    width: 100%;
+    /* background-color: #ff6ec4; */
     flex-direction: row;
     align-items: center;
     box-shadow: 1px 1px 1px 1px gray;
@@ -77,8 +86,18 @@ img{
     /* background-color: aqua; */
     align-items: center;
 }
+
+.menu-icon :hover{
+    border-radius: 100%;
+    background-color:lightgray;
+}
 .menus{
     height: 100%;
     width: 35%;
     /* background-color: aqua; */
+}
+.icon{
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
 }

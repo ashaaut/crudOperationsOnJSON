@@ -1,9 +1,5 @@
 import React ,{Component} from 'react'
 import './../../assets/styles/crudMenu.css'
-import EditIcon from '@material-ui/icons/Edit';
-import DeleteIcon from '@material-ui/icons/Delete';
-import BlockIcon from '@material-ui/icons/Block';
-
 
 class CrudMenu extends Component{
     constructor(){
@@ -23,9 +19,9 @@ class CrudMenu extends Component{
         console.log(this.state.selectedOperation)
         return(
             <div className="menu-container">
-                <div className="option" onClick={()=>this.handleClick("Edit")} ><EditIcon/>  Edit</div>
-                <div className="option" onClick={()=>this.handleClick("Delete")} ><DeleteIcon/> Delete</div>
-                <div className="option"  onClick={()=>this.handleClick("Block")}><BlockIcon/> Block</div>
+                <div className="option" onClick={()=>this.handleClick("Edit")} >Edit</div>
+                <div className="option" onClick={()=>this.handleClick("Delete")} >Delete</div>
+                <div className="option"  onClick={()=>this.handleClick("Block")}>Block</div>
             </div>
 
         )
