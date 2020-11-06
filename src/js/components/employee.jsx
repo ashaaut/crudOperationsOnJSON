@@ -25,8 +25,8 @@ class Employee extends Component {
 
   render() {
     const data = this.props;
-    console.log(data.data["Profile"])
-    console.log(this.state.selectedOption)
+    // console.log(data.data["Profile"])
+    // console.log(this.state.selectedOption)
     return (
       <div className="card-container">
         <div className="card-image">

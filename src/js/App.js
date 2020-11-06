@@ -22,8 +22,8 @@ class App extends React.Component {
   render() {
         return (
           <div className="app">
-            <Emp/>
-          {/* {this.state.selected=="login"?<Login changeState={this.changeState}/>:<SignUp changeState={this.changeState}/>} */}
+            {/* <Emp/> */}
+          {this.state.selected=="login"?<Login changeState={this.changeState}/>:<SignUp changeState={this.changeState}/>}
           
           </div>
     );

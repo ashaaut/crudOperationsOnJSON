@@ -7,15 +7,26 @@ import EmailIcon from '@material-ui/icons/Email';
 import LockIcon from '@material-ui/icons/Lock';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import Button from '@material-ui/core/Button';
-
+import Employees from './employees'
 
 class Login extends Component {
   constructor(props) {
     super(props)
+    this.state={
+      selected:false
+    }
+    this.onClick=this.onClick.bind(this)
+  }
+  onClick(){
+    this.setState({selected:!this.state.selected})
   }
   render() {
     const { changeState } = this.props;
     return (
+
+      this.state.selected?<Employees/>:
+
+
       <div className="login-container">
         <div className="login-name-div">
           <ExitToAppIcon className="appIcon" fontSize="large" />
@@ -64,7 +75,7 @@ class Login extends Component {
 
 
             <div className="button-div">
-              <Button className="button-div" variant="contained" color="primary">SIGN IN</Button>
+              <Button className="button-div" variant="contained" onClick= {this.onClick}color="primary">SIGN IN</Button>
 
             </div>
 
