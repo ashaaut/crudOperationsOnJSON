@@ -35,7 +35,7 @@ class Edit extends Component {
 
                         </div>
                         <div className="edit-info">
-
+                            <Basic/>
                         </div>
                     </div>
                     <div className="buttons-div">

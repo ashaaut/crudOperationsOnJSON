@@ -46,14 +46,14 @@
     color: white;
     height: 35px;
     width: 80px;
-    background-color: blue;
+    background-color: #303f9f;
     border-radius: 5px;
 }
 .cancelButton-div{
     height: 35px;
     width: 80px;
     color: white;
-    background-color: red;
+    background-color: #e62117;
     border-radius: 5px;
 }
 .edit-content{
