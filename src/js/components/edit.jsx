@@ -23,10 +23,10 @@ class Edit extends Component {
     }
     render() {
         let {show,closeModalHandler}=this.props;
-        console.log(show)
+        console.log(this.state.selectedOperation)
         let className="modal-bg"
         show?className:className+=" hide-modal"
-        console.log(className)
+        // console.log(className)
         
         return (
             <div className={className} >
@@ -35,16 +35,16 @@ class Edit extends Component {
                     <div className="title"><h3>Edit User</h3></div>
                     <div className="edit-container">
                         <div className="edit-content">
-                            <button  className="edit-button">Basic</button>
+                            <button  onClick={()=>this.handleClick("Basic")} className="edit-button">Basic</button>
                             <button onClick={()=>this.handleClick("Personal")} className="edit-button">Personal</button>
-                            <button className="edit-button">Work</button>
-                            <button className="edit-button">Contacts</button>
-                            <button className="edit-button">Social Life</button>
-                            <button className="edit-button">Settings</button>
+                            <button  onClick={()=>this.handleClick("Work")}className="edit-button">Work</button>
+                            <button onClick={()=>this.handleClick("Contacts")} className="edit-button">Contacts</button>
+                            <button onClick={()=>this.handleClick("SocialLife")} className="edit-button">Social Life</button>
+                            <button onClick={()=>this.handleClick("Settings")} className="edit-button">Settings</button>
 
                         </div>
                         <div className="edit-info">
-                            <Work/>
+                            <SocialLife/>
                             {/* {this.state.selectedOperation=="Personal"?<Personal/>:
                             <Basic/>} */}
                         </div>

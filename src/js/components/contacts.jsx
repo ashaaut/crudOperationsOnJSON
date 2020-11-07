@@ -5,41 +5,23 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import LockIcon from '@material-ui/icons/Lock';
 import InputAdornment from '@material-ui/core/InputAdornment';
-function Contacts(){
+function Contact(){
     return(
         <div>
-             <TextField
-              variant="standard"
-              placeholder="Username"
-              margin="normal"
-              required
-              label="UserName"
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <AccountBoxIcon />
-                  </InputAdornment>
-                ),
-              }}
-            // onChange={this.setUsername}
-            // value={this.state.username}
-            />
-            <TextField
-              variant="standard"
-              placeholder="Password"
-              margin="normal"
-              label="Password"
-              required
-              type="password"
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <LockIcon />
-                  </InputAdornment>
-                ),
-              }}
-           />
+             
+             <TextField 
+             required 
+              label="Email" 
+              defaultValue="Hello World" />
+             <TextField 
+             required 
+              label="Phone" 
+              defaultValue="Hello World" />
+	<TextField 
+             required 
+              label="Address" 
+              defaultValue="Hello World" />
         </div>
     )
 }
-export default Contacts;
+export default Contact;
