@@ -26,7 +26,7 @@ class Edit extends Component {
         console.log(this.state.selectedOperation)
         let className="modal-bg"
         show?className:className+=" hide-modal"
-        // console.log(className)
+        let data=this.props.data;
         
         return (
             <div className={className} >
@@ -44,9 +44,7 @@ class Edit extends Component {
 
                         </div>
                         <div className="edit-info">
-                            <SocialLife/>
-                            {/* {this.state.selectedOperation=="Personal"?<Personal/>:
-                            <Basic/>} */}
+                            {this.state.selectedOperation=="Basic"?<Basic data={data}/>:this.state.selectedOperation=="Personal"?<Personal data={data}/>:this.state.selectedOperation=="Work"?<Work data={data}/>:""}
                         </div>
                     </div>
                     <div className="buttons-div">

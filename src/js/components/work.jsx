@@ -5,22 +5,23 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import LockIcon from '@material-ui/icons/Lock';
 import InputAdornment from '@material-ui/core/InputAdornment';
-function Work(){
+function Work(props){
+    let data=props.data
     return(
         <div>
              
              <TextField 
              required 
               label="Company" 
-              defaultValue="Hello World" />
+              defaultValue={data.data["Company"]}/>
              <TextField 
              required 
               label="Position" 
-              defaultValue="Hello World" />
+              defaultValue={data.data["Position"]}/>
 	<TextField 
              required 
               label="Salary" 
-              defaultValue="Hello World" />
+              defaultValue={data.data["Salary"]}/>
         </div>
     )
 }

@@ -7,8 +7,8 @@ import Edit from './edit';
 
 
 class CrudMenu extends Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state={
             selectedOperation:"",
             show:false
@@ -31,6 +31,7 @@ class CrudMenu extends Component{
         // console.log("hii")
     }
     render(){
+        let data=this.props.data
         // console.log(this.state.show)
         return(
             <div>
@@ -40,7 +41,7 @@ class CrudMenu extends Component{
                 <div className="option" onClick={()=>this.handleClick("Delete")} ><DeleteIcon/> Delete</div>
                 <div className="option"  onClick={()=>this.handleClick("Block")}><BlockIcon/> Block</div>
             </div>
-        {this.state.selectedOperation=="Edit"?<Edit show={this.state.show} closeModalHandler={this.closeModalHandler} />:""}
+        {this.state.selectedOperation=="Edit"?<Edit data={data}show={this.state.show} closeModalHandler={this.closeModalHandler} />:""}
         {/* <Edit show={this.state.show} closeModalHandler={this.closeModalHandler} /> */}
             </div>
             

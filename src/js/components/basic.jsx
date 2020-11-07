@@ -5,14 +5,16 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import LockIcon from '@material-ui/icons/Lock';
 import InputAdornment from '@material-ui/core/InputAdornment';
-function Basic(){
+function Basic(props){
+  let data=props.data;
+  console.log(data.data["Username"])
     return(
         <div>
              <TextField
               variant="standard"
-              placeholder="Username"
               margin="normal"
               required
+              defaultValue={data.data["Username"]}
               label="UserName"
               InputProps={{
                 startAdornment: (
@@ -26,7 +28,7 @@ function Basic(){
             />
             <TextField
               variant="standard"
-              placeholder="Password"
+              defaultValue={data.data["Password"]}
               margin="normal"
               label="Password"
               required

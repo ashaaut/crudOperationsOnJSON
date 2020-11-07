@@ -59,7 +59,7 @@ class Employee extends Component {
             </div>
 
             <div className="menus">
-              {this.state.selectedOption ? <CrudMenu /> : <div></div>}
+              {this.state.selectedOption ? <CrudMenu data={data}/> : <div></div>}
             </div>
           </div>
         </div>
