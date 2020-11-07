@@ -11,7 +11,15 @@ import Setting from './setting';
 class Edit extends Component {
     constructor(props){
         super(props)
-
+        this.state={
+            selectedOperation:"Basic"
+        }
+        this.handleClick=this.handleClick.bind(this)
+    }
+    handleClick(op){
+        this.setState({
+            selectedOperation:op
+        })
     }
     render() {
         let {show,closeModalHandler}=this.props;
@@ -19,6 +27,7 @@ class Edit extends Component {
         let className="modal-bg"
         show?className:className+=" hide-modal"
         console.log(className)
+        
         return (
             <div className={className} >
                 
@@ -26,8 +35,8 @@ class Edit extends Component {
                     <div className="title"><h3>Edit User</h3></div>
                     <div className="edit-container">
                         <div className="edit-content">
-                            <button className="edit-button">Basic</button>
-                            <button className="edit-button">Personal</button>
+                            <button  className="edit-button">Basic</button>
+                            <button onClick={()=>this.handleClick("Personal")} className="edit-button">Personal</button>
                             <button className="edit-button">Work</button>
                             <button className="edit-button">Contacts</button>
                             <button className="edit-button">Social Life</button>
@@ -35,7 +44,9 @@ class Edit extends Component {
 
                         </div>
                         <div className="edit-info">
-                            <Basic/>
+                            <Work/>
+                            {/* {this.state.selectedOperation=="Personal"?<Personal/>:
+                            <Basic/>} */}
                         </div>
                     </div>
                     <div className="buttons-div">
