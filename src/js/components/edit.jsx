@@ -44,7 +44,12 @@ class Edit extends Component {
 
                         </div>
                         <div className="edit-info">
-                            {this.state.selectedOperation=="Basic"?<Basic data={data}/>:this.state.selectedOperation=="Personal"?<Personal data={data}/>:this.state.selectedOperation=="Work"?<Work data={data}/>:""}
+                            {this.state.selectedOperation=="Basic"?<Basic data={data}/>:
+                            this.state.selectedOperation=="Personal"?<Personal data={data}/>:
+                            this.state.selectedOperation=="Work"?<Work data={data}/>:
+                            this.state.selectedOperation=="Contacts"?<Contacts data={data}/>:
+                            this.state.selectedOperation=="SocialLife"?<SocialLife data={data}/>:
+                            this.state.selectedOperation=="Settings"?<Setting data={data}/>:""}
                         </div>
                     </div>
                     <div className="buttons-div">

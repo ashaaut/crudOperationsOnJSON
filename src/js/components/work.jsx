@@ -8,7 +8,7 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 function Work(props){
     let data=props.data
     return(
-        <div>
+        <div className="edit-info-container">
              
              <TextField 
              required 

@@ -8,7 +8,7 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 function Personal(props) {
     let data=props.data
     return (
-        <div className="">
+        <div className="personal-info-container">
 
             <TextField
                 required

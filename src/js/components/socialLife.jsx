@@ -5,22 +5,23 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import LockIcon from '@material-ui/icons/Lock';
 import InputAdornment from '@material-ui/core/InputAdornment';
-function SocialLife(){
+function SocialLife(props){
+    let data=props.data;
     return(
-        <div>
+        <div className="edit-info-container">
              
              <TextField 
              required 
               label="Facebook" 
-              defaultValue="Hello World" />
+              defaultValue={data.data["Facebook"]}/>
              <TextField 
              required 
               label="Twitter" 
-              defaultValue="Hello World" />
+              defaultValue={data.data["Twitter"]} />
 	<TextField 
              required 
               label="google" 
-              defaultValue="Hello World" />
+              defaultValue={data.data["Google"]} />
         </div>
     )
 }
