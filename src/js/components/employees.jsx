@@ -1,14 +1,29 @@
 import React,{Component} from 'react';
-import Data from './../../data/data.json';
+
 import Employee from './employee';
+import Axios from 'axios';
 import './../../assets/styles/employee.css'
 
 class Employees extends Component{
+constructor(){
+super();
+this.state = {
+data: []
+}
+}
+
+componentDidMount(){
+Axios.get("http://localhost:3000/employees")
+.then(result => {
+console.log(result);
+this.setState({data: result.data})
+})
+}
     render(){
-        const data=Data.employees;
+        const data=data;
         return(
             <div className="employee-container">
-                {data.map(emp=><Employee data={emp}/>)}
+                {this.state.data.map(emp=><Employee data={emp}/>)}
         
             </div>
         )

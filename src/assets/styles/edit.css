@@ -66,8 +66,8 @@ flex-direction: column;
 .edit-button{
     margin-top: 20px;
     height: 30px;
-    /* background-color: #e7e7e7;  */
-    color: black;
+    background-color:white; 
+    color:gray;
     border: none;
     text-decoration: none;
     display: inline-block;
@@ -75,6 +75,12 @@ flex-direction: column;
     font-size: 16px;
     height: 15%;
     width: 80%;
+}
+.edit-button:active{
+    background-color: lightgray;
+}
+.edit-button:focus{
+    color: black;
 }
 .edit-info{
     height: 100%;
@@ -91,8 +97,20 @@ flex-direction: column;
 }
 .edit-info-container{
     display: flex;
-    height: 60%;
+    height: 65%;
     width: 100%;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.checkbox-div{
+    background-color: aqua;
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+}
+.reg-last-div{
+font-size: 15px;
+margin-top: 10px;
+margin-bottom: 5px;
 }

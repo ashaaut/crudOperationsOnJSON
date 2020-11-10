@@ -1,13 +1,26 @@
-import React from 'react';
-
+import React,{useState} from 'react';
 import TextField from '@material-ui/core/TextField'
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import LockIcon from '@material-ui/icons/Lock';
 import InputAdornment from '@material-ui/core/InputAdornment';
 function Basic(props){
-  let data=props.data;
-  console.log(data.data["Username"])
+  let {data,handleOnChange}=props;
+  // console.log(data.data["Username"])
+
+// flag?fetch("http://localhost:3000/employees/"+ data["id"],
+// {
+// method: "PUT",
+// headers:{
+// 'Content-Type':'application/json'
+// },
+// body: JSON.stringify(userName)
+
+// }).then((result) => {
+// result.json().then((resp)=>{
+// alert("Employee information is Updated")
+// })
+
+// }):""
     return(
         <div>
              <TextField
@@ -23,7 +36,7 @@ function Basic(props){
                   </InputAdornment>
                 ),
               }}
-            // onChange={this.setUsername}
+              onChange={(e)=>handleOnChange("Username",e.target.value)}
             // value={this.state.username}
             />
             <TextField
@@ -40,6 +53,7 @@ function Basic(props){
                   </InputAdornment>
                 ),
               }}
+              onChange={(e)=>handleOnChange("password",e.target.value)}
            />
         </div>
     )
