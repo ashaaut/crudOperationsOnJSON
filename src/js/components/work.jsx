@@ -6,22 +6,28 @@ import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import LockIcon from '@material-ui/icons/Lock';
 import InputAdornment from '@material-ui/core/InputAdornment';
 function Work(props){
-    let data=props.data
+    let {data,handleOnChange}=props;
     return(
         <div className="edit-info-container">
              
              <TextField 
              required 
               label="Company" 
-              defaultValue={data.data["Company"]}/>
+              defaultValue={data.data["Company"]}
+              onChange={(e)=>handleOnChange("Company",e.target.value)}
+              />
              <TextField 
              required 
               label="Position" 
-              defaultValue={data.data["Position"]}/>
+              defaultValue={data.data["Position"]}
+              onChange={(e)=>handleOnChange("Position",e.target.value)}
+              />
 	<TextField 
              required 
               label="Salary" 
-              defaultValue={data.data["Salary"]}/>
+              defaultValue={data.data["Salary"]}
+              onChange={(e)=>handleOnChange("Salary",e.target.value)}
+              />
         </div>
     )
 }

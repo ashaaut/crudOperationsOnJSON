@@ -67,11 +67,11 @@ class Edit extends Component {
                         </div>
                         <div className="edit-info">
                             {this.state.selectedComponent == "Basic" ? <Basic handleOnChange={this.handleOnChange} data={data} /> :
-                                this.state.selectedComponent == "Personal" ? <Personal data={data} /> :
-                                    this.state.selectedComponent == "Work" ? <Work data={data} /> :
-                                        this.state.selectedComponent == "Contacts" ? <Contacts data={data} /> :
-                                            this.state.selectedComponent == "SocialLife" ? <SocialLife data={data} /> :
-                                                this.state.selectedComponent == "Settings" ? <Setting data={data} /> : <Basic />}
+                                this.state.selectedComponent == "Personal" ? <Personal  handleOnChange={this.handleOnChange} data={data} /> :
+                                    this.state.selectedComponent == "Work" ? <Work handleOnChange={this.handleOnChange} data={data} /> :
+                                        this.state.selectedComponent == "Contacts" ? <Contacts handleOnChange={this.handleOnChange} data={data} /> :
+                                            this.state.selectedComponent == "SocialLife" ? <SocialLife handleOnChange={this.handleOnChange} data={data} /> :
+                                                this.state.selectedComponent == "Settings" ? <Setting handleOnChange={this.handleOnChange} data={data} /> : <Basic />}
                         </div>
                     </div>
                     <div className="buttons-div">

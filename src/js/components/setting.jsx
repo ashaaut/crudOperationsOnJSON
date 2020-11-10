@@ -2,7 +2,7 @@ import React from 'react';
 
 import TextField from '@material-ui/core/TextField'
 function Setting(props) {
-    let data = props.data
+    let {data,handleOnChange}=props;
     return (
         <div className="edit-info-container">
             <div className="checkbox-div">
@@ -16,7 +16,8 @@ function Setting(props) {
             <TextField
                 required
                 label="Choose bg Color"
-                defaultValue="purple" />
+                defaultValue="purple" 
+                />
         </div>
     )
 }

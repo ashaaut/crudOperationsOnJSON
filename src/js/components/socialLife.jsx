@@ -6,22 +6,28 @@ import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import LockIcon from '@material-ui/icons/Lock';
 import InputAdornment from '@material-ui/core/InputAdornment';
 function SocialLife(props){
-    let data=props.data;
+    let {data,handleOnChange}=props;
     return(
         <div className="edit-info-container">
              
              <TextField 
              required 
               label="Facebook" 
-              defaultValue={data.data["Facebook"]}/>
+              defaultValue={data.data["Facebook"]}
+              onChange={(e)=>handleOnChange("Facebook",e.target.value)}
+              />
              <TextField 
              required 
               label="Twitter" 
-              defaultValue={data.data["Twitter"]} />
+              defaultValue={data.data["Twitter"]} 
+              onChange={(e)=>handleOnChange("Twitter",e.target.value)}
+              />
 	<TextField 
              required 
               label="google" 
-              defaultValue={data.data["Google"]} />
+              defaultValue={data.data["Google"]}
+              onChange={(e)=>handleOnChange("Google",e.target.value)}
+              />
         </div>
     )
 }
