@@ -43,6 +43,7 @@ class Employee extends Component {
             <div className="emp-name">
               <PersonOutlineIcon />
               {data.data["Name"]}
+              <div></div>
               {data.data["Surname"]}
             </div>
             <div className="menu-icon" >

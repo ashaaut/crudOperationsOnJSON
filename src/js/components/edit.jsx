@@ -13,45 +13,55 @@ class Edit extends Component {
         super(props)
         this.state = {
             selectedComponent: "Basic",
-            empData:this.props.data.data,
-            
+            empData: this.props.data.data,
+
         }
         this.handleClick = this.handleClick.bind(this);
-        this.handleOnChange=this.handleOnChange.bind(this);
+        this.handleOnChange = this.handleOnChange.bind(this);
     }
 
-    updateData(name,value){
-        let Data=this.props.data.data;
-        Data[name]=value
+    updateData(name, value) {
+        let Data = this.props.data.data;
+        Data[name] = value
         return Data
     }
 
     handleClick(selectedComponent) {
         this.setState({
             selectedComponent: selectedComponent,
-            empData:this.state.empData
+            empData: this.state.empData
         })
     }
 
-    handleOnChange(name,value){
-        this.setState({
-            selectedComponent:this.state.selectedComponent,
-            empData:this.updateData(name,value)
-        })
-    }
-
-    handleUpdate() {
+    handleOnChange(name, value) {
         this.setState({
             selectedComponent: this.state.selectedComponent,
-            empData:this.state.empData
+            empData: this.updateData(name, value)
         })
+    }
+
+    handleUpdate(id) {
+        fetch("http://localhost:3000/employees/" +id,
+            {
+                method: "PUT",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(this.state.empData)
+
+            }).then((result) => {
+                result.json().then((resp) => {
+                    // alert("Employee information is Updated")
+                })
+                // alert("Employee information is Updated")
+            })
     }
     render() {
         let { show, closeModalHandler } = this.props;
         let className = "modal-bg"
         show ? className : className += " hide-modal"
         let data = this.props.data;
-        console.log(this.state.empData)
+        console.log(data)
         return (
             <div className={className} >
                 <div className="edit-modal">
@@ -67,7 +77,7 @@ class Edit extends Component {
                         </div>
                         <div className="edit-info">
                             {this.state.selectedComponent == "Basic" ? <Basic handleOnChange={this.handleOnChange} data={data} /> :
-                                this.state.selectedComponent == "Personal" ? <Personal  handleOnChange={this.handleOnChange} data={data} /> :
+                                this.state.selectedComponent == "Personal" ? <Personal handleOnChange={this.handleOnChange} data={data} /> :
                                     this.state.selectedComponent == "Work" ? <Work handleOnChange={this.handleOnChange} data={data} /> :
                                         this.state.selectedComponent == "Contacts" ? <Contacts handleOnChange={this.handleOnChange} data={data} /> :
                                             this.state.selectedComponent == "SocialLife" ? <SocialLife handleOnChange={this.handleOnChange} data={data} /> :
@@ -75,7 +85,7 @@ class Edit extends Component {
                         </div>
                     </div>
                     <div className="buttons-div">
-                        <button onClick={this.handleUpdate} className="updateButton-div">Update</button>
+                        <button onClick={this.handleUpdate(data.data["id"])} className="updateButton-div">Update</button>
                         <button onClick={() => closeModalHandler()} className="cancelButton-div">Cancel</button>
                     </div>
                 </div>
