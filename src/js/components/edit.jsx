@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react'
+import EmpDetails from './empDetails';
 import './../../assets/styles/edit.css'
 import Basic from './basic';
 import Personal from './personal';
@@ -63,13 +64,15 @@ class Edit extends Component {
         let className = "modal-bg"
         show ? className : className += " hide-modal"
         let data = this.props.data;
-        console.log(data)
+        // console.log(data)
         return (
             <div className={className} >
                 <div className="edit-modal">
                     <div className="title"><h3>Edit User</h3></div>
+                    
                     <div className="edit-container">
-                        <div className="edit-content">
+                    <EmpDetails data={data}/>
+                        {/* <div className="edit-content">
                             <button onClick={() => this.handleClick("Basic")} className="edit-button">Basic</button>
                             <button onClick={() => this.handleClick("Personal")} className="edit-button">Personal</button>
                             <button onClick={() => this.handleClick("Work")} className="edit-button">Work</button>
@@ -84,7 +87,7 @@ class Edit extends Component {
                                         this.state.selectedComponent == "Contacts" ? <Contacts handleOnChange={this.handleOnChange} data={data} /> :
                                             this.state.selectedComponent == "SocialLife" ? <SocialLife handleOnChange={this.handleOnChange} data={data} /> :
                                                 this.state.selectedComponent == "Settings" ? <Setting handleOnChange={this.handleOnChange} data={data} /> : <Basic />}
-                        </div>
+                        </div> */}
                     </div>
                     <div className="buttons-div">
                         <button onClick={()=>this.handleUpdate(data.data["id"])} className="updateButton-div">Update</button>
