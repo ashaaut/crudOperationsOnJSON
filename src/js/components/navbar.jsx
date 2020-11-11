@@ -44,15 +44,12 @@ class NavBar extends Component {
             isAddUserModalOpen:false,
             data:this.state.data
         }))
-           
-        // console.log("hii")
     }
+
     render() {
-        // console.log(this.state.addUser)
         return (
             <div className="nav-container">
                 <div ><PersonAddIcon fontSize="large" className="addUser-div" onClick={this.handleAddUser} /></div>
-                {/* {this.state.addUser?<AddUser data={this.state.data}/>:""} */}
                 <AddUser data={this.state.data} show={this.state.isAddUserModalOpen} closeModalHandler={this.closeModalHandler}/>
             </div>
         )

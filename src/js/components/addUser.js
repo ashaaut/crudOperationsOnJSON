@@ -8,27 +8,37 @@ class AddUser extends Component {
         super(props)
         this.state = {
             selectedComponent: "Basic",
+            data:{
+                "id": "",
+                "Username": "",
+                "Password": "",
+                "Name": " ",
+                "Surname": "",
+                "Gender": "",
+                "Profile": "",
+                "Company": "",
+                "Position": "",
+                "Salary": "",
+                "Email": "",
+                "Phone": "",
+                "Address": "",
+                "Facebook": "",
+                "Twitter": "",
+                "Google": "",
+                "Active": "",
+                "Blocked": "",
+                "Registration": "",
+                "Last": ""
+            }
 
         }
-        this.handleClick = this.handleClick.bind(this);
-        // this.handleOnChange = this.handleOnChange.bind(this);
-    }
-
-    // updateData(name, value) {
-    //     let Data = this.props.data;
-    //     Data[name] = value
-    //     return Data
-    // }
-
-    handleClick(selectedComponent) {
-        this.setState({
-            selectedComponent: selectedComponent,
-        })
     }
 
     
+
+
     render() {
-        let { data, show,closeModalHandler } = this.props;
+        let { data,show,closeModalHandler } = this.props;
         let className = "modal-bg"
         show ? className : className += " hide-modal"
         return (

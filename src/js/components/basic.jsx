@@ -5,22 +5,7 @@ import LockIcon from '@material-ui/icons/Lock';
 import InputAdornment from '@material-ui/core/InputAdornment';
 function Basic(props){
   let {data,handleOnChange}=props;
-  // console.log(data["Username"])
-
-// flag?fetch("http://localhost:3000/employees/"+ data["id"],
-// {
-// method: "PUT",
-// headers:{
-// 'Content-Type':'application/json'
-// },
-// body: JSON.stringify(userName)
-
-// }).then((result) => {
-// result.json().then((resp)=>{
-// alert("Employee information is Updated")
-// })
-
-// }):""
+  console.log(data)
     return(
         <div>
              <TextField
@@ -37,7 +22,6 @@ function Basic(props){
                 ),
               }}
               onChange={(e)=>handleOnChange("Username",e.target.value)}
-            // value={this.state.username}
             />
             <TextField
               variant="standard"

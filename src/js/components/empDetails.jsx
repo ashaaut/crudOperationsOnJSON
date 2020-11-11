@@ -14,7 +14,7 @@ class empDetails extends Component {
         super(props)
         this.state = {
             selectedComponent: "Basic",
-            empData: this.props.data.data,
+            empData: this.props.data,
 
         }
         this.handleClick = this.handleClick.bind(this);
@@ -30,7 +30,28 @@ class empDetails extends Component {
     handleClick(selectedComponent) {
         this.setState({
             selectedComponent: selectedComponent,
-            empData: this.state.empData
+            empData:{
+                "id": "",
+                "Username": "",
+                "Password": "",
+                "Name": " ",
+                "Surname": "",
+                "Gender": "",
+                "Profile": "",
+                "Company": "",
+                "Position": "",
+                "Salary": "",
+                "Email": "",
+                "Phone": "",
+                "Address": "",
+                "Facebook": "",
+                "Twitter": "",
+                "Google": "",
+                "Active": "",
+                "Blocked": "",
+                "Registration": "",
+                "Last": ""
+            }
         })
     }
 
@@ -41,22 +62,6 @@ class empDetails extends Component {
         })
     }
 
-    // handleUpdate(id) {
-    //     fetch("http://localhost:3000/employees/" +id,
-    //         {
-    //             method: "PUT",
-    //             headers: {
-    //                 'Content-Type': 'application/json'
-    //             },
-    //             body: JSON.stringify(this.state.empData)
-
-    //         }).then((result) => {
-    //             result.json().then((resp) => {
-    //                  alert("Employee information is Updated")
-    //             })
-    //             // alert("Employee information is Updated")
-    //         })
-    // }
     
     render() {
         let data = this.props.data;
