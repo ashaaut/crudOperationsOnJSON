@@ -13,19 +13,19 @@ function Work(props){
              <TextField 
              required 
               label="Company" 
-              defaultValue={data.data["Company"]}
+              defaultValue={data["Company"]}
               onChange={(e)=>handleOnChange("Company",e.target.value)}
               />
              <TextField 
              required 
               label="Position" 
-              defaultValue={data.data["Position"]}
+              defaultValue={data["Position"]}
               onChange={(e)=>handleOnChange("Position",e.target.value)}
               />
 	<TextField 
              required 
               label="Salary" 
-              defaultValue={data.data["Salary"]}
+              defaultValue={data["Salary"]}
               onChange={(e)=>handleOnChange("Salary",e.target.value)}
               />
         </div>

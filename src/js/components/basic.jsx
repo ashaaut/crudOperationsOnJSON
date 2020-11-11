@@ -5,7 +5,7 @@ import LockIcon from '@material-ui/icons/Lock';
 import InputAdornment from '@material-ui/core/InputAdornment';
 function Basic(props){
   let {data,handleOnChange}=props;
-  // console.log(data.data["Username"])
+  // console.log(data["Username"])
 
 // flag?fetch("http://localhost:3000/employees/"+ data["id"],
 // {
@@ -27,7 +27,7 @@ function Basic(props){
               variant="standard"
               margin="normal"
               required
-              defaultValue={data.data["Username"]}
+              defaultValue={data["Username"]}
               label="UserName"
               InputProps={{
                 startAdornment: (
@@ -41,7 +41,7 @@ function Basic(props){
             />
             <TextField
               variant="standard"
-              defaultValue={data.data["Password"]}
+              defaultValue={data["Password"]}
               margin="normal"
               label="Password"
               required

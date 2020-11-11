@@ -22,7 +22,7 @@ class empDetails extends Component {
     }
 
     updateData(name, value) {
-        let Data = this.props.data.data;
+        let Data = this.props.data;
         Data[name] = value
         return Data
     }
@@ -60,6 +60,8 @@ class empDetails extends Component {
     
     render() {
         let data = this.props.data;
+        // console.log(data)
+
         return (<div className="empDetails-container">
                 <div className="edit-content">
                              <button onClick={() => this.handleClick("Basic")} className="edit-button">Basic</button>

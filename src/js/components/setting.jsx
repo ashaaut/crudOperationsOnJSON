@@ -11,8 +11,8 @@ function Setting(props) {
                 <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
                 <label for="vehicle2"> Blocked</label>
             </div>
-            <div className="reg-last-div">{data.data["Registration"]}</div>
-            <div className="reg-last-div">{data.data["Last"]}</div>
+            <div className="reg-last-div">{data["Registration"]}</div>
+            <div className="reg-last-div">{data["Last"]}</div>
             <TextField
                 required
                 label="Choose bg Color"

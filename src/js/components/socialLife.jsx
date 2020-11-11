@@ -13,19 +13,19 @@ function SocialLife(props){
              <TextField 
              required 
               label="Facebook" 
-              defaultValue={data.data["Facebook"]}
+              defaultValue={data["Facebook"]}
               onChange={(e)=>handleOnChange("Facebook",e.target.value)}
               />
              <TextField 
              required 
               label="Twitter" 
-              defaultValue={data.data["Twitter"]} 
+              defaultValue={data["Twitter"]} 
               onChange={(e)=>handleOnChange("Twitter",e.target.value)}
               />
 	<TextField 
              required 
               label="google" 
-              defaultValue={data.data["Google"]}
+              defaultValue={data["Google"]}
               onChange={(e)=>handleOnChange("Google",e.target.value)}
               />
         </div>

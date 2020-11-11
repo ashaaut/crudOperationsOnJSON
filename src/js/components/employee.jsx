@@ -24,13 +24,13 @@ class Employee extends Component {
   }
 
   render() {
-    const data = this.props;
-    // console.log(data.data["Profile"])
+    const data = this.props.data;
+    // console.log(data)
     // console.log(this.state.selectedOption)
     return (
       <div className="card-container">
         <div className="card-image">
-          <img className="profile" src={data.data["Profile"]} ></img>
+          <img className="profile" src={data["Profile"]} ></img>
           <div>
             <FacebookIcon className="icon"/>
           <TwitterIcon className="icon"/>
@@ -42,9 +42,9 @@ class Employee extends Component {
           <div className="emp-bar">
             <div className="emp-name">
               <PersonOutlineIcon />
-              {data.data["Name"]}
+              {data["Name"]}
               {" "}
-              {data.data["Surname"]}
+              {data["Surname"]}
             </div>
             <div className="menu-icon" >
               <MdMoreVert size="1.5em" onClick={this.onClick} />
@@ -53,10 +53,10 @@ class Employee extends Component {
 
           <div className="emp-card-body">
             <div className="emp-data">
-              <div className="data"><WorkIcon />{data.data["Position"]}</div>
-              <div className="data"><MailOutlineIcon />{data.data["Email"]}</div>
-              <div className="data"><PhoneIcon /> {data.data["Phone"]}</div>
-              <div className="data"><RoomIcon />{data.data["Address"]}</div>
+              <div className="data"><WorkIcon />{data["Position"]}</div>
+              <div className="data"><MailOutlineIcon />{data["Email"]}</div>
+              <div className="data"><PhoneIcon /> {data["Phone"]}</div>
+              <div className="data"><RoomIcon />{data["Address"]}</div>
             </div>
 
             <div className="menus">

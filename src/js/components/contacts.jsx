@@ -13,19 +13,19 @@ function Contact(props){
              <TextField 
              required 
               label="Email" 
-              defaultValue={data.data["Email"]} 
+              defaultValue={data["Email"]} 
               onChange={(e)=>handleOnChange("Email",e.target.value)}
               />
              <TextField 
              required 
               label="Phone" 
-              defaultValue={data.data["Phone"]}
+              defaultValue={data["Phone"]}
               onChange={(e)=>handleOnChange("Phone",e.target.value)}
               />
 	<TextField 
              required 
               label="Address" 
-              defaultValue={data.data["Address"]}
+              defaultValue={data["Address"]}
               onChange={(e)=>handleOnChange("Address",e.target.value)}
               />
         </div>

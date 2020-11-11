@@ -15,18 +15,18 @@ class Edit extends Component {
         super(props)
         this.state = {
             selectedComponent: "Basic",
-            empData: this.props.data.data,
+            empData: this.props.data,
 
         }
         this.handleClick = this.handleClick.bind(this);
         // this.handleOnChange = this.handleOnChange.bind(this);
     }
 
-    updateData(name, value) {
-        let Data = this.props.data.data;
-        Data[name] = value
-        return Data
-    }
+    // updateData(name, value) {
+    //     let Data = this.props.data;
+    //     Data[name] = value
+    //     return Data
+    // }
 
     handleClick(selectedComponent) {
         this.setState({
@@ -56,7 +56,8 @@ class Edit extends Component {
         let { show, closeModalHandler } = this.props;
         let className = "modal-bg"
         show ? className : className += " hide-modal"
-        let data = this.props.data;
+        let data = this.state.empData;
+        // console.log("hii")
         // console.log(data)
         return (
             <div className={className} >
@@ -83,7 +84,7 @@ class Edit extends Component {
                         </div> */}
                     </div>
                     <div className="buttons-div">
-                        <button onClick={()=>this.handleUpdate(data.data["id"])} className="updateButton-div">Update</button>
+                        <button onClick={()=>this.handleUpdate(data["id"])} className="updateButton-div">Update</button>
                         <button onClick={() => closeModalHandler()} className="cancelButton-div">Cancel</button>
                     </div>
                 </div>

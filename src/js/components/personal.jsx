@@ -13,13 +13,13 @@ function Personal(props) {
             <TextField
                 required
                 label="Name"
-                defaultValue={data.data["Name"]}
+                defaultValue={data["Name"]}
                 onChange={(e)=>handleOnChange("Name",e.target.value)}
                 />
             <TextField
                 required
                 label="surName"
-                defaultValue={data.data["Surname"]} 
+                defaultValue={data["Surname"]} 
                 onChange={(e)=>handleOnChange("Surname",e.target.value)}
                 />
             <div>Birthday <input type="date" value="2013-01-08" /></div>
@@ -30,7 +30,7 @@ function Personal(props) {
             <TextField
                 required
                 label="Image Url"
-                defaultValue={data.data["Profile"]}
+                defaultValue={data["Profile"]}
                 onChange={(e)=>handleOnChange("Image Url",e.target.value)}
                 />
         </div>
