@@ -23,6 +23,7 @@ this.setState({data: result.data})
         const data=data;
         return(
             <div className="employee-container">
+
                 {this.state.data.map(emp=><Employee data={emp}/>)}
         
             </div>

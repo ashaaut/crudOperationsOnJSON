@@ -1,0 +1,17 @@
+.main-container{
+    height: 100%;
+    width: 100%;
+    /* background-color: aqua; */
+}
+.nav-container{
+    width: 100%;
+    height: 15%;
+    /* position: fixed; */
+    background-color: blue;
+
+}
+.emp-container{
+    width: 100%;
+    height: 100%;
+    /* background-color: aqua; */
+}

@@ -7,7 +7,7 @@ import EmailIcon from '@material-ui/icons/Email';
 import LockIcon from '@material-ui/icons/Lock';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import Button from '@material-ui/core/Button';
-import Employees from './employees'
+import Main from './main'
 
 class Login extends Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class Login extends Component {
     const { changeState } = this.props;
     return (
 
-      this.state.selected?<Employees/>:
+      this.state.selected?<Main/>:
 
 
       <div className="login-container">

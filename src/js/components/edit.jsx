@@ -19,7 +19,7 @@ class Edit extends Component {
 
         }
         this.handleClick = this.handleClick.bind(this);
-        this.handleOnChange = this.handleOnChange.bind(this);
+        // this.handleOnChange = this.handleOnChange.bind(this);
     }
 
     updateData(name, value) {
@@ -32,13 +32,6 @@ class Edit extends Component {
         this.setState({
             selectedComponent: selectedComponent,
             empData: this.state.empData
-        })
-    }
-
-    handleOnChange(name, value) {
-        this.setState({
-            selectedComponent: this.state.selectedComponent,
-            empData: this.updateData(name, value)
         })
     }
 
