@@ -1,28 +1,6 @@
 {
   "employees": [
     {
-      "id": "1",
-      "Username": "sonal",
-      "Password": "asha123",
-      "Name": "sonali",
-      "Surname": "Autade",
-      "Gender": "Female",
-      "Profile": "http://www.annular.themeseason.com/assets/img/profile/ashley.jpg",
-      "Company": "TCS",
-      "Position": "Student",
-      "Salary": "5000",
-      "Email": "ashaautade@gmail.com",
-      "Phone": "9",
-      "Address": "Mangalwedha",
-      "Facebook": "ashley_ahlberg",
-      "Twitter": "ashley_ahlberg",
-      "Google": "ashley_ahlberg",
-      "Active": "Active",
-      "Blocked": "Blocked",
-      "Registration": "Registration date:13 October, 2012 at 17:50",
-      "Last": "Last joined date:21 April, 2017 at 23:55"
-    },
-    {
       "id": "2",
       "Username": "h",
       "Password": "sakshi123",
@@ -48,7 +26,7 @@
       "id": "3",
       "Username": "Shraddha",
       "Password": "Shraddha123",
-      "Name": "Manvi",
+      "Name": "Trupti",
       "Surname": "Gavli",
       "Gender": "Female",
       "Profile": "http://www.annular.themeseason.com/assets/img/avatars/avatar-3.png",

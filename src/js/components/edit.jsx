@@ -8,6 +8,7 @@ import Contacts from './contacts';
 import SocialLife from './socialLife';
 import Setting from './setting';
 
+
 class Edit extends Component {
     constructor(props) {
         super(props)
@@ -51,11 +52,12 @@ class Edit extends Component {
 
             }).then((result) => {
                 result.json().then((resp) => {
-                    // alert("Employee information is Updated")
+                     alert("Employee information is Updated")
                 })
                 // alert("Employee information is Updated")
             })
     }
+    
     render() {
         let { show, closeModalHandler } = this.props;
         let className = "modal-bg"
@@ -85,7 +87,7 @@ class Edit extends Component {
                         </div>
                     </div>
                     <div className="buttons-div">
-                        <button onClick={this.handleUpdate(data.data["id"])} className="updateButton-div">Update</button>
+                        <button onClick={()=>this.handleUpdate(data.data["id"])} className="updateButton-div">Update</button>
                         <button onClick={() => closeModalHandler()} className="cancelButton-div">Cancel</button>
                     </div>
                 </div>

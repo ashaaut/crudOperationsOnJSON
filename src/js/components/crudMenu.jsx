@@ -4,8 +4,7 @@ import EditIcon from '@material-ui/icons/Edit';
 import DeleteIcon from '@material-ui/icons/Delete';
 import BlockIcon from '@material-ui/icons/Block';
 import Edit from './edit';
-
-
+import Axios from 'axios';
 class CrudMenu extends Component{
     constructor(props){
         super(props)
@@ -30,6 +29,9 @@ class CrudMenu extends Component{
            
         // console.log("hii")
     }
+    handleDelete(id){
+        Axios.delete("http://localhost:3000/employees/"+id);
+    }
     render(){
         let data=this.props.data
         // console.log(this.state.show)
@@ -38,7 +40,7 @@ class CrudMenu extends Component{
                 <div className="menu-container">
                 
                 <div className="option" onClick={()=>this.handleClick("Edit")} ><EditIcon/>  Edit</div>
-                <div className="option" onClick={()=>this.handleClick("Delete")} ><DeleteIcon/> Delete</div>
+                <div className="option"  onClick={()=>this.handleDelete(data.data["id"])} ><DeleteIcon/> Delete</div>
                 <div className="option"  onClick={()=>this.handleClick("Block")}><BlockIcon/> Block</div>
             </div>
         {this.state.selectedOperation=="Edit"?<Edit data={data}show={this.state.show} closeModalHandler={this.closeModalHandler} />:""}
