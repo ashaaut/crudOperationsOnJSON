@@ -31,14 +31,10 @@ class AddUser extends Component {
         let { data, show,closeModalHandler } = this.props;
         let className = "modal-bg"
         show ? className : className += " hide-modal"
-        // console.log("hii")
-        console.log(data)
-        console.log(show)
-        console.log(closeModalHandler)
         return (
             <div className={className} >
                 <div className="edit-modal">
-                    <div className="title"><h3>Edit User</h3></div>
+                    <div className="title"><h3>Add User</h3></div>
                     
                     <div className="edit-container">
                     <EmpDetails data={data}/>
