@@ -7,28 +7,7 @@ class NavBar extends Component {
         super()
         this.state = {
             isAddUserModalOpen: false,
-            data:{
-                "id": "",
-                "Username": "",
-                "Password": "",
-                "Name": " ",
-                "Surname": "",
-                "Gender": "",
-                "Profile": "",
-                "Company": "",
-                "Position": "",
-                "Salary": "",
-                "Email": "",
-                "Phone": "",
-                "Address": "",
-                "Facebook": "",
-                "Twitter": "",
-                "Google": "",
-                "Active": "",
-                "Blocked": "",
-                "Registration": "",
-                "Last": ""
-            }
+            
         }
         this.handleAddUser = this.handleAddUser.bind(this);
         this.closeModalHandler=this.closeModalHandler.bind(this)
@@ -36,13 +15,11 @@ class NavBar extends Component {
     handleAddUser() {
         this.setState({
             isAddUserModalOpen: true,
-            data:this.state.data
         })
     }
     closeModalHandler(){
         this.setState(()=>({
             isAddUserModalOpen:false,
-            data:this.state.data
         }))
     }
 
@@ -50,7 +27,7 @@ class NavBar extends Component {
         return (
             <div className="nav-container">
                 <div ><PersonAddIcon fontSize="large" className="addUser-div" onClick={this.handleAddUser} /></div>
-                <AddUser data={this.state.data} show={this.state.isAddUserModalOpen} closeModalHandler={this.closeModalHandler}/>
+                <AddUser show={this.state.isAddUserModalOpen} closeModalHandler={this.closeModalHandler}/>
             </div>
         )
     }

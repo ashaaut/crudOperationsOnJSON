@@ -30,28 +30,7 @@ class empDetails extends Component {
     handleClick(selectedComponent) {
         this.setState({
             selectedComponent: selectedComponent,
-            empData:{
-                "id": "",
-                "Username": "",
-                "Password": "",
-                "Name": " ",
-                "Surname": "",
-                "Gender": "",
-                "Profile": "",
-                "Company": "",
-                "Position": "",
-                "Salary": "",
-                "Email": "",
-                "Phone": "",
-                "Address": "",
-                "Facebook": "",
-                "Twitter": "",
-                "Google": "",
-                "Active": "",
-                "Blocked": "",
-                "Registration": "",
-                "Last": ""
-            }
+            empData:this.props.data
         })
     }
 
@@ -64,8 +43,7 @@ class empDetails extends Component {
 
     
     render() {
-        let data = this.props.data;
-        // console.log(data)
+        let data = this.state.empData;
 
         return (<div className="empDetails-container">
                 <div className="edit-content">

@@ -5,7 +5,6 @@ import LockIcon from '@material-ui/icons/Lock';
 import InputAdornment from '@material-ui/core/InputAdornment';
 function Basic(props){
   let {data,handleOnChange}=props;
-  console.log(data)
     return(
         <div>
              <TextField
